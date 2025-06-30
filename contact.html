@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Bomb Batteries</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMTAiIHk9IjE1IiB3aWR0aD0iMjAiIGhlaWdodD0iMTAiIGZpbGw9IiNGRkQ3MDAiLz4KPHJlY3QgeD0iMzAiIHk9IjE4IiB3aWR0aD0iMyIgaGVpZ2h0PSI0IiBmaWxsPSIjRkZENzAwIi8+CjxyZWN0IHg9IjciIHk9IjE4IiB3aWR0aD0iMyIgaGVpZ2h0PSI0IiBmaWxsPSIjRkY0NTAwIi8+Cjwvc3ZnPgo=" alt="Bomb Batteries Logo">
+                    <span>Bomb Batteries</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="calculator.html" class="nav-link">Battery Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="security.html" class="nav-link">Security</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-container">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Get in touch with our battery experts for quotes, technical support, or general inquiries.</p>
+                
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                        <span class="error-message" id="fullNameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company/Organization</label>
+                        <input type="text" id="company" name="company">
+                        <span class="error-message" id="companyError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inquiryType">Inquiry Type *</label>
+                        <select id="inquiryType" name="inquiryType" required>
+                            <option value="">Select inquiry type</option>
+                            <option value="quote">Request Quote</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="warranty">Warranty Claim</option>
+                            <option value="partnership">Business Partnership</option>
+                            <option value="general">General Question</option>
+                        </select>
+                        <span class="error-message" id="inquiryTypeError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Battery Types of Interest (Select all that apply):</label>
+                        <div class="checkbox-group" id="batteryTypes">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="smartphone" name="batteryTypes" value="smartphone">
+                                <label for="smartphone">Smartphone Batteries</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="laptop" name="batteryTypes" value="laptop">
+                                <label for="laptop">Laptop Batteries</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="tablet" name="batteryTypes" value="tablet">
+                                <label for="tablet">Tablet Batteries</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="automotive" name="batteryTypes" value="automotive">
+                                <label for="automotive">Automotive Batteries</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="industrial" name="batteryTypes" value="industrial">
+                                <label for="industrial">Industrial Batteries</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="custom" name="batteryTypes" value="custom">
+                                <label for="custom">Custom Solutions</label>
+                            </div>
+                        </div>
+                        <span class="error-message" id="batteryTypesError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity">Estimated Quantity Needed</label>
+                        <select id="quantity" name="quantity">
+                            <option value="">Select quantity</option>
+                            <option value="1-10">1-10 units</option>
+                            <option value="11-50">11-50 units</option>
+                            <option value="51-100">51-100 units</option>
+                            <option value="101-500">101-500 units</option>
+                            <option value="500+">500+ units</option>
+                        </select>
+                        <span class="error-message" id="quantityError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="urgency">Priority Level</label>
+                        <select id="urgency" name="urgency">
+                            <option value="">Select priority</option>
+                            <option value="low">Low - General inquiry</option>
+                            <option value="medium">Medium - Within 1 week</option>
+                            <option value="high">High - Within 48 hours</option>
+                            <option value="urgent">Urgent - ASAP</option>
+                        </select>
+                        <span class="error-message" id="urgencyError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Please provide details about your battery needs, specifications, or questions..."></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                            <label for="newsletter">Subscribe to our newsletter for battery tips and product updates</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="terms" name="terms" value="agreed" required>
+                            <label for="terms">I agree to the terms of service and privacy policy *</label>
+                        </div>
+                        <span class="error-message" id="termsError"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+
+                <div class="form-success" id="formSuccess">
+                    <h3>Thank you for your message!</h3>
+                    <p>We've received your inquiry and will respond within 24 hours. Check your email for a confirmation.</p>
+                </div>
+
+                <div class="contact-info-section">
+                    <h2>Other Ways to Reach Us</h2>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <h4>📧 Email</h4>
+                            <p>info@bombbatteries.com</p>
+                            <p>For general inquiries and quotes</p>
+                        </div>
+                        <div class="contact-method">
+                            <h4>📞 Phone</h4>
+                            <p>(555) 123-BOMB</p>
+                            <p>Monday - Friday: 8 AM - 6 PM EST</p>
+                        </div>
+                        <div class="contact-method">
+                            <h4>🚚 Emergency Support</h4>
+                            <p>(555) 911-BOMB</p>
+                            <p>24/7 for urgent battery failures</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html> 

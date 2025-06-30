@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Calculator - Bomb Batteries</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMTAiIHk9IjE1IiB3aWR0aD0iMjAiIGhlaWdodD0iMTAiIGZpbGw9IiNGRkQ3MDAiLz4KPHJlY3QgeD0iMzAiIHk9IjE4IiB3aWR0aD0iMyIgaGVpZ2h0PSI0IiBmaWxsPSIjRkZENzAwIi8+CjxyZWN0IHg9IjciIHk9IjE4IiB3aWR0aD0iMyIgaGVpZ2h0PSI0IiBmaWxsPSIjRkY0NTAwIi8+Cjwvc3ZnPgo=" alt="Bomb Batteries Logo">
+                    <span>Bomb Batteries</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="calculator.html" class="nav-link active">Battery Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="security.html" class="nav-link">Security</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="calculator-container">
+            <div class="container">
+                <h1>Battery Calculator</h1>
+                <p>Calculate battery runtime, power consumption, and cost estimation for your devices.</p>
+                
+                <form class="calculator-form" id="batteryCalculator">
+                    <div class="form-group">
+                        <label for="calculatorType">Calculation Type:</label>
+                        <select id="calculatorType" name="calculatorType" required>
+                            <option value="">Select calculation type</option>
+                            <option value="runtime">Battery Runtime</option>
+                            <option value="capacity">Required Capacity</option>
+                            <option value="cost">Cost Estimation</option>
+                        </select>
+                        <span class="error-message" id="calculatorTypeError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deviceType">Device Type:</label>
+                        <select id="deviceType" name="deviceType" required>
+                            <option value="">Select device type</option>
+                            <option value="smartphone">Smartphone</option>
+                            <option value="laptop">Laptop</option>
+                            <option value="tablet">Tablet</option>
+                            <option value="car">Electric Car</option>
+                            <option value="custom">Custom Device</option>
+                        </select>
+                        <span class="error-message" id="deviceTypeError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="batteryCapacity">Battery Capacity (mAh):</label>
+                        <input type="number" id="batteryCapacity" name="batteryCapacity" min="100" max="100000" required>
+                        <span class="error-message" id="batteryCapacityError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="powerConsumption">Power Consumption (mW):</label>
+                        <input type="number" id="powerConsumption" name="powerConsumption" min="10" max="50000" required>
+                        <span class="error-message" id="powerConsumptionError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="voltage">Operating Voltage (V):</label>
+                        <input type="number" id="voltage" name="voltage" min="1" max="48" step="0.1" value="3.7" required>
+                        <span class="error-message" id="voltageError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="usageHours">Daily Usage (hours):</label>
+                        <input type="number" id="usageHours" name="usageHours" min="0.1" max="24" step="0.1" required>
+                        <span class="error-message" id="usageHoursError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pricePerUnit">Price per Battery ($):</label>
+                        <input type="number" id="pricePerUnit" name="pricePerUnit" min="1" max="10000" step="0.01">
+                        <span class="error-message" id="pricePerUnitError"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Calculate</button>
+                </form>
+
+                <div class="calculator-result" id="calculatorResult">
+                    <h3>Calculation Results</h3>
+                    <div id="resultContent"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html> 
